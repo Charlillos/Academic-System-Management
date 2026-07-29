@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Academic Calendar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Calendario.css">
+
+</head>
+
+<body class="calendar-body">
+
+    <!-- Barra superior -->
+
+    <header class="top-bar">
+
+        <a href="index.html" class="brand">
+
+            <img src="Gemini_Generated_Image_4melx84melx84mel.png" alt="Logo">
+
+            <span>Academic Management System</span>
+
+        </a>
+
+        <a href="index.html" class="home-button">
+
+            Inicio
+
+        </a>
+
+    </header>
+
+    <main class="calendar-page">
+
+        <section class="calendar-header">
+
+            <h1>Academic Calendar</h1>
+
+            <p>
+                Organiza tus tareas y fechas importantes.
+            </p>
+
+        </section>
+
+        <!-- Navegación del mes -->
+
+        <section class="calendar-navigation">
+
+            <button id="btnPreviousMonth">
+
+                ◀
+
+            </button>
+
+            <h2 id="monthTitle">
+
+                Agosto 2026
+
+            </h2>
+
+            <button id="btnNextMonth">
+
+                ▶
+
+            </button>
+
+        </section>
+
+        <!-- Contenido principal -->
+
+        <section class="calendar-layout">
+
+            <!-- Calendario -->
+
+            <div class="calendar-container">
+
+                <div class="calendar-weekdays">
+
+                    <div>Lun</div>
+                    <div>Mar</div>
+                    <div>Mié</div>
+                    <div>Jue</div>
+                    <div>Vie</div>
+                    <div>Sáb</div>
+                    <div>Dom</div>
+
+                </div>
+
+                <div id="calendarGrid">
+
+                    <!-- JS generará automáticamente los días -->
+
+                </div>
+
+            </div>
+
+            <!-- Panel lateral -->
+
+            <aside class="task-panel">
+
+                <h3>
+
+                    Pending Tasks
+
+                </h3>
+
+                <div id="pendingTasks">
+
+                    <!-- JS cargará las tareas -->
+
+                </div>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+    <script src="Calendario.js"></script>
+
+</body>
+
+</html>

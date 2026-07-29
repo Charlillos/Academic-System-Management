@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard Homeworks</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Dashboard.css">
+</head>
+
+<body class="dashboard-body">
+
+    <header class="top-bar">
+        <a href="index.html" class="brand">
+            <img src="Gemini_Generated_Image_4melx84melx84mel.png" alt="Logo del sistema">
+            <span>Academic Management System</span>
+        </a>
+
+        <a href="index.html" class="home-button">
+            Inicio
+        </a>
+    </header>
+
+    <main class="dashboard-page">
+
+        <section class="dashboard-hero">
+            <h1>Dashboard de Tareas</h1>
+            <p>
+                Aquí se mostrarán tus tareas organizadas por asignatura.
+                Solo aparecerán las materias que tengan tareas registradas.
+            </p>
+        </section>
+
+        <section class="dashboard-summary">
+
+            <article class="summary-card">
+                <span class="summary-label">Tareas registradas</span>
+                <strong id="totalTareas" class="summary-value">0</strong>
+            </article>
+
+            <article class="summary-card">
+                <span class="summary-label">Asignaturas activas</span>
+                <strong id="totalAsignaturas" class="summary-value">0</strong>
+            </article>
+
+            <article class="summary-card">
+                <span class="summary-label">Pendientes</span>
+                <strong id="totalPendientes" class="summary-value">0</strong>
+            </article>
+
+        </section>
+
+        <div id="dashboardContainer">
+            <!-- Aquí el JS inyecta las tarjetas por asignatura -->
+        </div>
+
+    </main>
+
+    <script src="Dashboard.js"></script>
+
+</body>
+</html>

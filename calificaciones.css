@@ -1,0 +1,471 @@
+/* ================================
+   CONFIGURACIÓN GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    background: linear-gradient(135deg, #2b355f 0%, #3c2553 100%);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+
+/* ================================
+   CONTENEDOR PRINCIPAL
+================================ */
+
+.welcome-container {
+    width: 90%;
+    max-width: 1000px;
+
+    padding: 60px 50px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ================================
+   LOGO
+================================ */
+
+.logo-container {
+    margin-bottom: 25px;
+}
+
+.logo-container img {
+    width: 110px;
+    height: 110px;
+
+    object-fit: contain;
+
+    border-radius: 22px;
+}
+
+
+/* ================================
+   TÍTULO
+================================ */
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================================
+   SUBTÍTULO
+================================ */
+
+.subtitle {
+    max-width: 600px;
+
+    margin: 0 auto 40px;
+
+    color: #aeb8cc;
+
+    font-size: 1.05rem;
+
+    line-height: 1.7;
+}
+
+
+/* ================================
+   BOTONES
+================================ */
+
+.menu-buttons {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+}
+
+
+.menu-button {
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: white;
+
+    font-size: 1rem;
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.menu-button span {
+    display: block;
+
+    font-size: 1.8rem;
+
+    margin-bottom: 8px;
+}
+
+
+.menu-button:hover {
+    transform: translateY(-5px);
+
+    background: rgba(255, 255, 255, 0.14);
+
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* ================================
+   DISEÑO PARA CELULAR
+================================ */
+
+@media (max-width: 600px) {
+
+    .welcome-container {
+        padding: 40px 25px;
+    }
+
+    .menu-buttons {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.top-bar {
+    width: 100%;
+    padding: 20px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.brand img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.home-button {
+    padding: 10px 18px;
+
+    color: white;
+    text-decoration: none;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 10px;
+
+    transition: 0.25s ease;
+}
+
+
+
+.home-button:hover {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+
+.calificaciones-page {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+}
+
+.calificaciones-hero {
+    margin-bottom: 32px;
+}
+
+.calificaciones-hero h1 {
+    font-size: 44px;
+    color: white;
+    margin: 0 0 12px;
+}
+
+.calificaciones-hero p {
+    color: #CFCFCF;
+    font-size: 16px;
+    max-width: 600px;
+}
+
+#calificacionesContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.subject-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.subject-card h2 {
+    color: white;
+    font-size: 22px;
+    margin: 0 0 16px;
+}
+
+.period-block {
+    margin-top: 20px;
+    padding-left: 16px;
+    border-left: 2px solid rgba(255,255,255,0.1);
+}
+
+.period-block h3 {
+    color: #8EA8C3;
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+
+.activity-block {
+    margin-top: 14px;
+    margin-left: 8px;
+}
+
+.activity-block h4 {
+    color: #CFCFCF;
+    font-size: 13px;
+    font-weight: 500;
+    margin: 0 0 8px;
+}
+
+.nota-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nota-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0;
+    font-size: 13px;
+    color: #CFCFCF;
+}
+
+.input-nota {
+    width: 60px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.05);
+    color: white;
+    text-align: center;
+}
+
+.peso-tag {
+    font-size: 11px;
+    color: #8EA8C3;
+    font-weight: 400;
+}
+
+/* Calculadora */
+
+.calculadora-card {
+    margin-top: 40px;
+    padding: 24px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+}
+
+.calculadora-card h2 {
+    color: white;
+    font-size: 18px;
+    margin: 0;
+}
+
+.calculadora-form {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.calculadora-form select,
+.calculadora-form input {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: #12181F;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.calculadora-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2D88FF;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.resultado-calculadora {
+    margin-top: 16px;
+    font-weight: 500;
+    color: #7CD9C0;
+}
+
+/* Botón Generar reportes */
+
+.acciones-reportes {
+    margin-top: 32px;
+    text-align: right;
+}
+
+.acciones-reportes .menu-button {
+    display: inline-block;
+    padding: 14px 24px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.acciones-reportes .menu-button:hover {
+    background: rgba(255,255,255,0.16);
+}
+.promedio-general-card {
+    margin-top: 32px;
+    padding: 24px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+}
+
+.promedio-general-card h2 {
+    color: white;
+    font-size: 18px;
+    margin: 0 0 6px;
+}
+
+.promedio-general-card p {
+    color: #CFCFCF;
+    font-size: 13px;
+    margin: 0 0 16px;
+}
+
+.promedio-general-form {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.promedio-general-form select {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: #12181F;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.promedio-general-resultado {
+    font-size: 32px;
+    font-weight: 700;
+    color: #7CD9C0;
+}
+.subject-toggle {
+    all: unset;              /* borra CUALQUIER estilo previo de botón, de golpe */
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+.subject-toggle h2 {
+    margin: 0;
+    color: white;
+    font-size: 22px;
+}
+
+.toggle-arrow {
+    color: #8EA8C3;
+    font-size: 18px;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.subject-content {
+    overflow: hidden;
+    max-height: 2000px;
+    transition: max-height 0.25s ease;
+}
+
+.subject-card.colapsada .subject-content {
+    max-height: 0;
+}
+
+.subject-card.colapsada .toggle-arrow {
+    transform: rotate(-90deg);
+}

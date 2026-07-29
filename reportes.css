@@ -1,0 +1,321 @@
+/* ================================
+   CONFIGURACIÓN GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    background: linear-gradient(135deg, #2b355f 0%, #3c2553 100%);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+
+/* ================================
+   CONTENEDOR PRINCIPAL
+================================ */
+
+.welcome-container {
+    width: 90%;
+    max-width: 1000px;
+
+    padding: 60px 50px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ================================
+   LOGO
+================================ */
+
+.logo-container {
+    margin-bottom: 25px;
+}
+
+.logo-container img {
+    width: 110px;
+    height: 110px;
+
+    object-fit: contain;
+
+    border-radius: 22px;
+}
+
+
+/* ================================
+   TÍTULO
+================================ */
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================================
+   SUBTÍTULO
+================================ */
+
+.subtitle {
+    max-width: 600px;
+
+    margin: 0 auto 40px;
+
+    color: #aeb8cc;
+
+    font-size: 1.05rem;
+
+    line-height: 1.7;
+}
+
+
+/* ================================
+   BOTONES
+================================ */
+
+.menu-buttons {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+}
+
+
+.menu-button {
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 22px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: white;
+
+    font-size: 1rem;
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.menu-button span {
+    display: block;
+
+    font-size: 1.8rem;
+
+    margin-bottom: 8px;
+}
+
+
+.menu-button:hover {
+    transform: translateY(-5px);
+
+    background: rgba(255, 255, 255, 0.14);
+
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/* ================================
+   DISEÑO PARA CELULAR
+================================ */
+
+@media (max-width: 600px) {
+
+    .welcome-container {
+        padding: 40px 25px;
+    }
+
+    .menu-buttons {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+.top-bar {
+    width: 100%;
+    padding: 20px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.brand img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.home-button {
+    padding: 10px 18px;
+
+    color: white;
+    text-decoration: none;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 10px;
+
+    transition: 0.25s ease;
+}
+
+
+
+.reportes-page {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+}
+
+.reportes-hero h1 {
+    font-size: 44px;
+    color: white;
+    margin: 0 0 12px;
+}
+
+.reportes-hero p {
+    color: #CFCFCF;
+    font-size: 16px;
+    max-width: 600px;
+}
+
+.reportes-form {
+    display: flex;
+    gap: 12px;
+    margin: 32px 0;
+}
+
+.reportes-form select,
+.reportes-form button {
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.15);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+.reportes-form select {
+    background: #12181F;
+    color: white;
+}
+
+.reportes-form button {
+    background: #2D88FF;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+/* Tabla estilo Excel */
+
+.tabla-reporte {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+}
+
+.tabla-reporte th {
+    background: rgba(255,255,255,0.08);
+    color: #8EA8C3;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-align: left;
+    padding: 12px 16px;
+    font-size: 12px;
+}
+
+.tabla-reporte th span {
+    font-weight: 400;
+    color: #6C7A94;
+}
+
+.tabla-reporte td {
+    padding: 10px 16px;
+    color: #E7ECF2;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.tabla-reporte tbody tr:hover {
+    background: rgba(255,255,255,0.04);
+}
+
+.celda-materia {
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.celda-promedio {
+    color: #7CD9C0;
+    font-weight: 600;
+}
+
+.tabla-reporte tfoot td {
+    border-top: 2px solid rgba(255,255,255,0.15);
+    font-weight: 600;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}

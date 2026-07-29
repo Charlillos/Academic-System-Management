@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calificaciones</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="calificaciones.css">
+</head>
+<body>
+
+    <header class="top-bar">
+        <a href="index.html" class="brand">
+            <img src="Gemini_Generated_Image_4melx84melx84mel.png" alt="Logo">
+            <span>Academic Management System</span>
+        </a>
+        <a href="index.html" class="home-button">Inicio</a>
+    </header>
+
+    <main class="calificaciones-page">
+
+        <section class="calificaciones-hero">
+            <h1>Calificaciones</h1>
+            <p>Promedio actual por materia, calculado a partir de tus notas registradas.</p>
+        </section>
+
+        <div id="calificacionesContainer">
+            <!-- JS genera aquí una tarjeta por materia -->
+        </div>
+        <section class="promedio-general-card">
+    <h2>Promedio general del estudiante</h2>
+    <p>Combina las 11 materias — las que aún no tienen nota cuentan como 0.</p>
+
+    <div class="promedio-general-form">
+        <select id="selectPeriodoGeneral">
+            <option value="Período 1">Período 1</option>
+            <option value="Período 2">Período 2</option>
+            <option value="Período 3">Período 3</option>
+            <option value="Período 4">Período 4</option>
+        </select>
+        <span class="promedio-general-resultado" id="resultadoPromedioGeneral">0.00</span>
+    </div>
+</section>
+
+        <section class="calculadora-card">
+            <h2>¿Cuánto necesitas sacar en el examen final para pasar la materia?</h2>
+
+            <div class="calculadora-form">
+                <select id="selectMateriaCalc"></select>
+                <select id="selectPeriodoCalc"></select>
+                <input type="number" id="inputMeta" placeholder="Nota meta" min="0" max="10" step="0.1" value="7.0">
+                <button id="btnCalcular">Calcular</button>
+            </div>
+
+            <p id="resultadoCalculadora" class="resultado-calculadora"></p>
+        </section>
+
+        <div class="acciones-reportes">
+            <a href="reportes.html" class="menu-button">Generar reportes</a>
+        </div>
+
+    </main>
+
+    <script src="calificaciones.js"></script>
+
+</body>
+</html>

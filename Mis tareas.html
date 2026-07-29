@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mis Tareas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="Mis tareas.css">
+</head>
+
+<body>
+
+    <main class="contenedor-tareas">
+
+        <h1>Mis Tareas</h1>
+
+        <div class="formulario-tarea">
+
+            <!-- Porcentaje -->
+            <input 
+                type="number" 
+                id="porcentajeTarea" 
+                placeholder="%"
+                min="0"
+                max="100"
+            >
+            <!-- Selector de Período -->
+<div class="dropdown">
+    <button type="button" id="btnPeriodo" class="btn-asignatura">
+        Período ▾
+    </button>
+    <ul id="listaPeriodos" class="lista-asignaturas">
+        <li>Período 1</li>
+        <li>Período 2</li>
+        <li>Período 3</li>
+        <li>Período 4</li>
+    </ul>
+</div>
+
+<!-- Selector de Actividad -->
+<div class="dropdown">
+    <button type="button" id="btnActividad" class="btn-asignatura">
+        Actividad ▾
+    </button>
+    <ul id="listaActividades" class="lista-asignaturas">
+        <li>Actividad 1</li>
+        <li>Actividad 2</li>
+        <li>Examen Final</li>
+    </ul>
+</div>
+
+            <!-- Nombre de la tarea -->
+            <input 
+                type="text" 
+                id="nombreTarea" 
+                placeholder="Nombre de la tarea"
+            >
+
+            <!-- Selector de asignatura -->
+            <div class="dropdown">
+
+<button type="button" id="btnAsignatura" class="btn-asignatura">
+    Seleccionar asignatura ▾
+</button>
+
+                <ul id="listaAsignaturas" class="lista-asignaturas">
+
+                    <li>Inglés</li>
+                    <li>Matemáticas</li>
+                    <li>Cálculo</li>
+                    <li>Ciencias Sociales y Cívica</li>
+                    <li>Seminario</li>
+                    <li>Física</li>
+                    <li>Biología</li>
+                    <li>Química</li>
+                    <li>Filosofía</li>
+                    <li>Lenguaje y Literatura</li>
+                    <li>Informática</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Botones -->
+        <div class="acciones">
+
+            <button type="button" id="btnGuardar">
+             Guardar
+            </button>
+            <a href="Dashboard homeworks.html" class="menu-button">
+                Siguiente
+            </a>
+
+        </div>
+
+    </main>
+
+    <script src="funciones.js"></script>
+
+</body>
+</html>
